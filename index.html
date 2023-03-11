@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Escolha a mensagem e envie</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+  <body>
+    <div onclick="zap(this)">
+      <p>Você é mais forte do que imagina e mais capaz do que pensa.</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <div onclick="zap(this)">
+      <p>Você tem o poder de fazer o melhor de qualquer situação.</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <div onclick="zap(this)">
+      <p>Você é único no mundo. Aproveite o que você tem para oferecer.</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <div onclick="zap(this)">
+      <p>
+        Você é responsável por sua própria felicidade. Não a deixe nas mãos dos
+        outros.
+      </p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <div onclick="zap(this)">
+      <p>A vida é curta. Aproveite cada momento.</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <div onclick="zap(this)">
+      <p>Mude o que não pode ser aceito e aceite o que não pode ser mudado.</p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </div>
+
+    <script>
+      function zap(elemento) {
+        let texto = elemento.firstElementChild.innerText;
+        let numero = prompt("Qual é o número?");
+        console.log(numero);
+        let zapLink = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+        window.open(zapLink);
+      }
+    </script>
+  </body>
+</html>
